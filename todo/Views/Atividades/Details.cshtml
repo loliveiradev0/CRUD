@@ -1,0 +1,62 @@
+﻿@model todo.Models.Atividades
+
+<br />
+<br />
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="@Url.Action("Index")">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Detalhes</li>
+    </ol>
+</nav>
+
+<div>
+    <h4>Detalhes da tarefa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Data)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Data)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Concluída)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Concluída)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Realizando)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Realizando)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fazer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fazer)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.AtividadeId }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

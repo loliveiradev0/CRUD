@@ -1,0 +1,63 @@
+﻿@model todo.Models.Atividades
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<br />
+<br />
+<h3>Você tem certeza que deseja deletar a tarefa?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Data)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Data)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Concluída)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Concluída)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Realizando)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Realizando)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fazer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fazer)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar", "Index")
+        </div>
+    }
+</div>
